@@ -6,4 +6,4 @@
 
 [**Peppa**🐷](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-Prochainement je rajouterais leur grands-parents, et ensuite je vous reserve un petit jeu.
+Une mise à jour arrive prochainement...
