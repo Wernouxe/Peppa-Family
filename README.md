@@ -7,4 +7,4 @@
 [**Peppa**🐷](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 Une mise à jour arrive prochainement...
-_Enfin quand j'aurais pas la flemme :')_
+*Enfin quand j'aurais pas la flemme :')*
