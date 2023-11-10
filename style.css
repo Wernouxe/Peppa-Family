@@ -175,7 +175,11 @@ body {
 audio {
   display: none;
 }
-
+.ads {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 @media (max-width: 780px) {
   header img {
     width: 100vw;
