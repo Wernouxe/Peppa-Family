@@ -1,3 +1,12 @@
+:root {
+  --down-color-card: #eb99c2;
+  --color-mamie: #c14492;
+  --color-maman: #f3af89;
+  --color-peppa: #f1635d;
+  --color-papi: #6b4fa4;
+  --color-papa: #77c7c1;
+  --color-george: #007cc2;
+}
 *,
 ::after,
 ::before {
@@ -22,10 +31,10 @@ header {
   left: 0px;
   bottom: 0px;
   padding: 10px;
-  z-index: 4;
   fill: #ffffff;
   cursor: pointer;
   transition: all 0.2s;
+  z-index: 100;
 }
 
 .github:hover {
@@ -37,187 +46,197 @@ body {
   background-color: #7fb6f6;
   overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #007cc2;
+}
+::-webkit-scrollbar-thumb {
+  background: #006699;
+  border-radius: 10px;
+}
 .soleil {
-  position: absolute;
+  position: fixed;
   right: 0;
   margin: 30px;
   width: 130px;
   z-index: 0;
 }
-
-.cards {
-  position: relative;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 350px 350px;
-  margin-top: 40px;
-  gap: 12px;
-  z-index: 3;
-}
-
-.card {
-  position: relative;
-  display: flex;
-  height: 350px;
-  width: 300px;
-  border-radius: 16px;
-  margin: 10px;
-}
-
-.card.george {
-  background: linear-gradient(180deg, #007cc2 0%, #db87b9 100%);
-}
-
-.card.peppa {
-  background: linear-gradient(180deg, #f1635d 0%, #db87b9 100%);
-}
-
-.card.maman {
-  background: linear-gradient(180deg, #f3af89 0%, #db87b9 100%);
-}
-
-.card.papa {
-  background: linear-gradient(180deg, #77c7c1 0%, #db87b9 100%);
-}
-
-.card-layer {
-  display: flex;
-  margin: 10px;
-  background-color: aliceblue;
-  border-radius: 10px;
-}
-
-.card-layer2 {
-  margin: 8px;
-  border: 10px #7fb6f6 solid;
-  border-radius: 10px;
-}
-
-.card-name {
-  display: flex;
-  margin: 10px;
-}
-
-.card-name img {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 6px;
-  border-radius: 40px;
-  background: none;
-  cursor: pointer;
-  transition: scale 0.2s ease-in-out;
-}
-
-.card-name img:hover {
-  scale: 1.1;
-}
-
-.card-name img:active {
-  scale: 1.2;
-}
-
-.card-name h1 {
-  font-size: 20px;
-  font-weight: 600;
-  font-family: Jua, sans-serif;
-}
-
-.card.george .card-name h1 {
-  color: #236da1;
-}
-
-.card.peppa .card-name h1 {
-  color: #eba1c6;
-}
-
-.card.maman .card-name h1 {
-  color: #f3af89;
-}
-
-.card.papa .card-name h1 {
-  color: #77c7c1;
-}
-
-.card-description {
-  position: relative;
-  display: flex;
-  width: 60%;
-  margin: 10px;
-}
-
-.card-description p {
-  font-size: 14px;
-  font-family: Jost, sans-serif;
-}
-
-.personnage {
-  position: absolute;
-  top: 70px;
-  right: -60px;
-}
-
-.card.george .personnage {
-  top: 90px;
-  right: -40px;
-}
-
 .herbe {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  z-index: -1;
+  position: absolute;
+  max-height: 860px;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
-
+.denree {
+  position: fixed;
+  width: 300px;
+  position: absolute;
+  z-index: 0;
+  rotate: 331deg;
+  top: 130px;
+}
 audio {
   display: none;
 }
-.ads {
+.cards {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 292px);
+  grid-gap: 110px;
+  row-gap: 35px;
+  padding-top: 55px;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 8px;
+}
+.card.mamie {
+  background: linear-gradient(
+    180deg,
+    var(--color-mamie) 0%,
+    var(--down-color-card) 100%
+  );
+}
+.card.maman {
+  background: linear-gradient(
+    180deg,
+    var(--color-maman) 0%,
+    var(--down-color-card) 100%
+  );
+}
+.card.peppa {
+  background: linear-gradient(
+    180deg,
+    var(--color-peppa) 0%,
+    var(--down-color-card) 100%
+  );
+}
+.card.papi {
+  background: linear-gradient(
+    180deg,
+    var(--color-papi) 0%,
+    var(--down-color-card) 100%
+  );
+}
+.card.papa {
+  background: linear-gradient(
+    180deg,
+    var(--color-papa) 0%,
+    var(--down-color-card) 100%
+  );
+}
+.card.george {
+  background: linear-gradient(
+    180deg,
+    var(--color-george) 0%,
+    var(--down-color-card) 100%
+  );
+}
+.card-layer {
   position: relative;
   display: flex;
-  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
 }
-@media (max-width: 780px) {
-  header img {
-    width: 100vw;
-  }
+.card-layer2 {
+  position: relative;
+  display: flex;
+  background-color: #7fb6f6;
+  padding: 8px;
+  border-radius: 6px;
+}
+.last-fucking-layer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.card-name {
+  display: flex;
+  font-family: "Jua", sans-serif;
+  font-size: 10px;
+  margin: 10px 10px 0px 10px;
+}
+.card-name img {
+  padding-left: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.card-name img:hover {
+  scale: 1.1;
+}
+.card-name img:active {
+  scale: 1.2;
+}
+.special-groin::before {
+  content: "Groin de Tbeau";
+  color: #000000;
+  position: absolute;
+  bottom: 100%;
+  left: 73px;
+  background: #ffffff8a;
+  padding: 3px 6px;
+  backdrop-filter: blur(2px);
+  border-radius: 13px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+.special-groin:hover::before {
+  opacity: 1;
+}
 
-  body {
-    overflow: auto;
-  }
+.card-description {
+  color: #000000;
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  margin: 10px;
+  padding-right: 50px;
+}
+.personnage {
+  position: relative;
+  display: flex;
+  width: 175px;
+  left: 176px;
+  bottom: 130px;
+  margin: 10px;
+  transform: translate(-8px, -145px);
+}
 
+@media screen and (max-width: 1274px) {
   .cards {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 10px auto;
+    grid-template-columns: repeat(2, 292px);
+    grid-gap: 90px;
+    row-gap: 20px;
   }
-
-  .card {
-    width: 270px;
-    height: 315px;
-  }
-
   .herbe {
+    position: fixed;
+  }
+}
+@media screen and (max-width: 860px) {
+  .cards {
+    grid-template-columns: repeat(1, 292px);
+    grid-gap: 90px;
+    row-gap: 20px;
+  }
+  .denree {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .denree {
     display: none;
-  }
-
-  .card p {
-    font-size: 12px;
-  }
-
-  .personnage {
-    width: 173px;
-  }
-
-  .card.maman .personnage {
-    width: 190px;
-  }
-
-  .card.george .personnage {
-    width: 150px;
   }
 }
