@@ -72,7 +72,7 @@ body {
 }
 .denree {
   position: fixed;
-  width: 300px;
+  max-width: 300px;
   position: absolute;
   z-index: 0;
   rotate: 331deg;
@@ -95,7 +95,7 @@ audio {
 
 .card {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   height: 350px;
   color: #ffffff;
   border-radius: 12px;
@@ -208,7 +208,7 @@ audio {
 .personnage {
   position: relative;
   display: flex;
-  width: 175px;
+  max-width: 175px;
   left: 176px;
   bottom: 130px;
   margin: 10px;
@@ -223,6 +223,7 @@ audio {
   }
   .herbe {
     position: fixed;
+    max-height: 90%;
   }
 }
 @media screen and (max-width: 860px) {
@@ -238,5 +239,17 @@ audio {
 @media screen and (max-width: 860px) {
   .denree {
     display: none;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 263px);
+  }
+  .personnage {
+    max-width: 132px;
+    left: 153px;
+    bottom: 130px;
   }
 }
